@@ -7,13 +7,17 @@
 }
 
 :root {
-  --black: #080808;
-  --surface: #101010;
-  --surface2: #161616;
-  --white: #f5f5f0;
-  --accent: #c8f04a;
-  --muted: #555555;
-  --border: #1e1e1e;
+  --black: #0a0a0a;
+  --surface: #141414;
+  --surface2: #1c1c1c;
+  --cream: #e8e4d9;
+  --cream-dark: #d4cfc4;
+  --white: #f5f2ec;
+  --accent: #e8e4d9;
+  --muted: #888888;
+  --border: #2a2a2a;
+  --border-light: #d0ccc4;
+  --text-dark: #1a1a1a;
   --serif: "DM Serif Display", serif;
   --sans: "Instrument Sans", sans-serif;
   --mono: "DM Mono", monospace;
@@ -41,7 +45,7 @@ nav {
   border-bottom: 0.5px solid var(--border);
   position: sticky;
   top: 0;
-  background: rgba(8, 8, 8, 0.96);
+  background: rgba(10, 10, 10, 0.97);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 100;
@@ -51,7 +55,7 @@ nav {
   font-family: var(--mono);
   font-size: 13px;
   letter-spacing: 0.2em;
-  color: var(--accent);
+  color: var(--cream);
   text-decoration: none;
 }
 
@@ -63,24 +67,24 @@ nav {
 
 .nav-links a {
   font-size: 13px;
-  color: #666;
+  color: #aaa;
   text-decoration: none;
   letter-spacing: 0.03em;
   transition: color 0.1s;
 }
 
 .nav-links a:hover {
-  color: var(--white);
+  color: var(--cream);
 }
 
 .nav-cta {
-  background: var(--accent);
-  color: var(--black);
+  background: transparent;
+  color: var(--cream);
   font-family: var(--sans);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 400;
   padding: 0.5rem 1.25rem;
-  border: none;
+  border: 1px solid rgba(232,228,217,0.3);
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
@@ -95,7 +99,7 @@ nav {
 /* ── HERO ── */
 .hero {
   padding: 5rem 2.5rem 4rem;
-  border-bottom: 0.5px solid var(--border);
+  border-bottom: 1px solid var(--border);
   position: relative;
   overflow: hidden;
 }
@@ -124,7 +128,7 @@ nav {
 .trust-dot {
   width: 7px;
   height: 7px;
-  background: var(--accent);
+  background: var(--cream);
   border-radius: 50%;
   flex-shrink: 0;
 }
@@ -132,7 +136,7 @@ nav {
 .trust-bar span {
   font-family: var(--mono);
   font-size: 11px;
-  color: #777;
+  color: #999;
   letter-spacing: 0.1em;
 }
 
@@ -148,12 +152,12 @@ nav {
 
 .hero h1 em {
   font-style: italic;
-  color: var(--accent);
+  color: var(--cream);
 }
 
 .hero-sub {
   font-size: 15px;
-  color: #777;
+  color: #aaa;
   max-width: 520px;
   line-height: 1.75;
   margin-bottom: 2.5rem;
@@ -168,8 +172,8 @@ nav {
 }
 
 .btn-primary {
-  background: var(--accent);
-  color: var(--black);
+  background: var(--cream);
+  color: var(--text-dark);
   font-family: var(--sans);
   font-size: 14px;
   font-weight: 600;
@@ -187,9 +191,9 @@ nav {
 
 .btn-ghost {
   font-size: 13px;
-  color: #888;
+  color: #aaa;
   cursor: pointer;
-  border: 0.5px solid var(--border);
+  border: 1px solid rgba(255,255,255,0.15);
   background: none;
   padding: 0.85rem 1.5rem;
   text-decoration: none;
@@ -207,12 +211,12 @@ nav {
 .hero-metrics {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border: 0.5px solid var(--border);
+  border: 1px solid var(--border);
 }
 
 .metric {
   padding: 1.25rem 1.5rem;
-  border-right: 0.5px solid var(--border);
+  border-right: 1px solid var(--border);
 }
 
 .metric:last-child {
@@ -228,7 +232,7 @@ nav {
 
 .metric .lbl {
   font-size: 11px;
-  color: #555;
+  color: #777;
   letter-spacing: 0.05em;
   margin-top: 0.4rem;
   font-family: var(--mono);
@@ -237,7 +241,7 @@ nav {
 /* ── SECTIONS ── */
 .section {
   padding: 4rem 2.5rem;
-  border-bottom: 0.5px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .section-header {
@@ -250,7 +254,7 @@ nav {
 .sec-label {
   font-family: var(--mono);
   font-size: 11px;
-  color: #444;
+  color: #777;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   margin-bottom: 0.75rem;
@@ -302,15 +306,15 @@ nav {
   font-family: var(--mono);
   font-size: 9px;
   letter-spacing: 0.15em;
-  color: var(--accent);
-  border: 0.5px solid var(--accent);
+  color: var(--cream);
+  border: 0.5px solid var(--cream-dark);
   padding: 2px 6px;
 }
 
 .fw-tag {
   font-family: var(--mono);
   font-size: 10px;
-  color: #444;
+  color: #777;
   letter-spacing: 0.1em;
   margin-bottom: 1rem;
 }
@@ -325,13 +329,13 @@ nav {
 
 .fw-card .controls {
   font-size: 12px;
-  color: #555;
+  color: #888;
   margin-bottom: 0.75rem;
 }
 
 .fw-card p {
   font-size: 12px;
-  color: #555;
+  color: #888;
   line-height: 1.65;
 }
 
@@ -356,7 +360,7 @@ nav {
 .why-num {
   font-family: var(--mono);
   font-size: 11px;
-  color: #333;
+  color: #555;
   margin-bottom: 1.5rem;
 }
 
@@ -370,7 +374,7 @@ nav {
 
 .why-card p {
   font-size: 13px;
-  color: #666;
+  color: #aaa;
   line-height: 1.75;
 }
 
@@ -391,14 +395,14 @@ nav {
 }
 
 .compare-table th.col-us-head {
-  color: var(--accent);
+  color: var(--cream);
 }
 
 .compare-table td {
   padding: 1rem 1.5rem;
   font-size: 13px;
   border-bottom: 0.5px solid var(--border);
-  color: #444;
+  color: #888;
 }
 
 .compare-table tr:last-child td {
@@ -406,7 +410,7 @@ nav {
 }
 
 .compare-table td.row-label {
-  color: #888;
+  color: #aaa;
 }
 
 .compare-table td.col-us {
@@ -415,7 +419,7 @@ nav {
 
 .compare-table td.col-us.tick::before {
   content: "✓ ";
-  color: var(--accent);
+  color: var(--cream);
   font-weight: 600;
 }
 
@@ -441,7 +445,7 @@ nav {
   border-right: 0.5px solid var(--border);
   font-family: var(--mono);
   font-size: 11px;
-  color: #444;
+  color: #777;
   display: flex;
   align-items: flex-start;
   transition: background 0.12s;
@@ -452,7 +456,7 @@ nav {
   border-right: 0.5px solid var(--border);
   font-family: var(--mono);
   font-size: 11px;
-  color: var(--accent);
+  color: var(--cream);
   display: flex;
   align-items: flex-start;
   transition: background 0.12s;
@@ -472,7 +476,7 @@ nav {
 
 .proc-content p {
   font-size: 13px;
-  color: #666;
+  color: #aaa;
   line-height: 1.65;
 }
 
@@ -500,8 +504,8 @@ nav {
   font-family: var(--mono);
   font-size: 9px;
   letter-spacing: 0.12em;
-  color: var(--accent);
-  border: 0.5px solid var(--accent);
+  color: var(--cream);
+  border: 0.5px solid var(--cream-dark);
   padding: 2px 6px;
   margin-bottom: 1rem;
 }
@@ -515,7 +519,7 @@ nav {
 
 .who-card p {
   font-size: 13px;
-  color: #666;
+  color: #aaa;
   line-height: 1.65;
 }
 
@@ -535,13 +539,13 @@ nav {
 }
 
 .cta-block h2 em {
-  color: var(--accent);
+  color: var(--cream);
   font-style: italic;
 }
 
 .cta-block p {
   font-size: 14px;
-  color: #666;
+  color: #aaa;
   margin-bottom: 2.5rem;
   max-width: 460px;
   margin-left: auto;
@@ -552,7 +556,7 @@ nav {
 .cta-meta {
   font-family: var(--mono);
   font-size: 11px;
-  color: #444;
+  color: #777;
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -574,7 +578,7 @@ footer {
 .footer-logo {
   font-family: var(--mono);
   font-size: 11px;
-  color: #333;
+  color: #666;
   letter-spacing: 0.2em;
 }
 
@@ -586,13 +590,13 @@ footer {
 
 .footer-links a {
   font-size: 12px;
-  color: #444;
+  color: #777;
   text-decoration: none;
   transition: color 0.1s;
 }
 
 .footer-links a:hover {
-  color: #888;
+  color: var(--cream);
 }
 
 /* ── CONTACT FORM ── */
@@ -615,13 +619,13 @@ footer {
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: 0.15em;
-  color: #444;
+  color: #777;
   margin-bottom: 0.35rem;
 }
 
 .contact-meta-value {
   font-size: 13px;
-  color: #888;
+  color: #aaa;
   line-height: 1.5;
 }
 
@@ -654,7 +658,7 @@ footer {
 
 .form-input {
   background: var(--surface);
-  border: 0.5px solid var(--border);
+  border: 1px solid var(--border);
   color: var(--white);
   font-family: var(--sans);
   font-size: 13px;
@@ -705,11 +709,11 @@ footer {
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
-  border: 0.5px solid var(--border);
+  border: 1px solid var(--border);
   padding: 0.4rem 0.75rem;
   font-family: var(--mono);
   font-size: 11px;
-  color: #555;
+  color: #777;
   transition: border-color 0.1s, color 0.1s;
 }
 
@@ -731,12 +735,12 @@ footer {
 }
 
 .form-checkbox input[type="checkbox"]:checked {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: var(--cream);
+  border-color: var(--cream);
 }
 
 .form-checkbox input[type="checkbox"]:checked + span {
-  color: var(--accent);
+  color: var(--cream);
 }
 
 .form-footer {
@@ -749,7 +753,7 @@ footer {
 .form-note {
   font-family: var(--mono);
   font-size: 11px;
-  color: #444;
+  color: #777;
 }
 
 .form-submit:disabled {
@@ -771,12 +775,12 @@ footer {
   align-items: center;
   gap: 1rem;
   padding: 1.25rem 1.5rem;
-  border: 0.5px solid var(--accent);
+  border: 1px solid var(--cream-dark);
 }
 
 .form-success-icon {
   font-size: 1.25rem;
-  color: var(--accent);
+  color: var(--cream);
   font-weight: 600;
   line-height: 1;
 }
@@ -791,7 +795,7 @@ footer {
 .form-success-sub {
   font-family: var(--mono);
   font-size: 11px;
-  color: #555;
+  color: #888;
 }
 
 @media (max-width: 900px) {
@@ -931,7 +935,7 @@ footer {
   display: none;
   flex-direction: column;
   gap: 0;
-  background: rgba(8, 8, 8, 0.98);
+  background: rgba(10, 10, 10, 0.99);
   border-bottom: 0.5px solid var(--border);
   overflow: hidden;
   max-height: 0;
@@ -951,14 +955,14 @@ footer {
   display: block;
   padding: 1rem 1.5rem;
   font-size: 14px;
-  color: #888;
+  color: #aaa;
   text-decoration: none;
-  border-bottom: 0.5px solid var(--border);
+  border-bottom: 1px solid var(--border);
   transition: color 0.1s, background 0.1s;
 }
 
 .mobile-menu ul li a:hover {
-  color: var(--white);
+  color: var(--cream);
   background: var(--surface);
 }
 
@@ -969,14 +973,14 @@ footer {
 
 /* ── TYPEWRITER ── */
 .typewriter-text {
-  color: var(--accent);
+  color: var(--cream);
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: 0.1em;
 }
 
 .typewriter-cursor {
-  color: var(--accent);
+  color: var(--cream);
   font-family: var(--mono);
   font-size: 11px;
   animation: blink 0.8s step-end infinite;
@@ -1024,7 +1028,7 @@ footer {
 /* ── ACTIVE NAV LINK ── */
 .nav-links a.active,
 .mobile-menu a.active {
-  color: var(--accent);
+  color: var(--cream);
 }
 
 /* ── WHATSAPP FLOAT ── */
@@ -1068,7 +1072,8 @@ footer {
   transition: opacity 0.12s, transform 0.12s;
 }
 .nav-cta:hover {
-  opacity: 0.88;
+  opacity: 1;
+  background: rgba(232,228,217,0.1);
   transform: translateY(-1px);
 }
 
@@ -1086,15 +1091,15 @@ footer {
   transition: border-color 0.1s, color 0.1s, transform 0.1s;
 }
 .btn-ghost:hover {
-  border-color: #444;
-  color: var(--white);
+  border-color: rgba(232,228,217,0.5);
+  color: var(--cream);
   transform: translateY(-2px);
 }
 
 /* Framework cards — accent left border reveal */
 .fw-card:hover {
   background: var(--surface);
-  border-left-color: var(--accent);
+  border-left-color: var(--cream-dark);
   transform: translateX(3px);
 }
 
@@ -1107,7 +1112,7 @@ footer {
   transform: translateY(-4px);
 }
 .why-card:hover .why-num {
-  color: var(--accent);
+  color: var(--cream);
   transition: color 0.1s;
 }
 
@@ -1123,13 +1128,13 @@ footer {
   background: var(--surface);
 }
 .metric:hover .num {
-  color: var(--accent);
+  color: var(--cream);
   transition: color 0.1s;
 }
 
 /* Process rows — slide in accent */
 .proc-row:hover {
-  border-left-color: var(--accent);
+  border-left-color: var(--cream-dark);
 }
 .proc-row:hover .proc-step,
 .proc-row:hover .proc-time,
@@ -1150,12 +1155,13 @@ footer {
   transition: letter-spacing 0.15s ease, opacity 0.12s;
 }
 .nav-logo:hover {
-  letter-spacing: 0.3em;
-  opacity: 0.85;
+  letter-spacing: 0.28em;
+  opacity: 0.8;
 }
 
 /* Trust dot pulse */
 .trust-dot {
+  background: var(--cream);
   animation: pulse-dot 2s ease-in-out infinite;
 }
 @keyframes pulse-dot {
@@ -1170,3 +1176,161 @@ footer {
   .nav-links { display: none; }
   .wa-float { bottom: 1.25rem; right: 1.25rem; }
 }
+
+/* ── VASUIST.COM COLOR SCHEME OVERRIDES ── */
+
+/* Nav CTA — ghost style matching live site */
+.nav-cta {
+  border-radius: 0;
+  letter-spacing: 0.05em;
+}
+.nav-cta:hover {
+  border-color: rgba(232, 228, 217, 0.6);
+}
+
+/* Headings on dark bg use off-white, not pure white */
+.hero h1, .sec-title, .why-card h3, .fw-card h3,
+.cta-block h2, .proc-content h4, .who-card h4 {
+  color: var(--white);
+}
+
+/* Form input focus — cream border */
+.form-input:focus {
+  border-color: var(--cream-dark);
+}
+
+/* Metric num color */
+.metric .num {
+  color: var(--white);
+}
+
+/* Compare table Vasuist column */
+.compare-table td.col-us {
+  color: var(--white);
+}
+
+/* Footer border */
+footer {
+  border-top: 1px solid var(--border);
+}
+
+/* Contact meta link */
+.contact-meta-value a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.1s;
+}
+.contact-meta-value a:hover {
+  color: var(--cream);
+}
+
+/* CTA meta links */
+.cta-meta a {
+  color: #777;
+  text-decoration: none;
+  transition: color 0.1s;
+}
+.cta-meta a:hover {
+  color: var(--cream);
+}
+
+/* ── ALTERNATING SECTION BACKGROUNDS ── */
+
+/* Cream sections: frameworks + who-we-help */
+.section-cream {
+  background: var(--cream);
+  border-bottom: 1px solid var(--cream-dark);
+}
+.section-cream .sec-label { color: #888; }
+.section-cream .sec-title { color: var(--text-dark); }
+.section-cream .section-header { border-color: var(--cream-dark); }
+
+.section-cream .frameworks-grid,
+.section-cream .fw-row { background: var(--cream-dark); }
+.section-cream .fw-card {
+  background: var(--cream);
+  border-left-color: transparent;
+}
+.section-cream .fw-card:hover {
+  background: #dedad0;
+  border-left-color: var(--text-dark);
+}
+.section-cream .fw-tag { color: #888; }
+.section-cream .fw-card h3 { color: var(--text-dark); }
+.section-cream .fw-card .controls { color: #777; }
+.section-cream .fw-card p { color: #666; }
+.section-cream .fw-card.featured::before {
+  color: var(--text-dark);
+  border-color: var(--text-dark);
+}
+
+.section-cream .who-grid { background: var(--cream-dark); }
+.section-cream .who-card { background: var(--cream); }
+.section-cream .who-card:hover { background: #dedad0; }
+.section-cream .who-tag {
+  color: var(--text-dark);
+  border-color: #aaa8a0;
+}
+.section-cream .who-card h4 { color: var(--text-dark); }
+.section-cream .who-card p { color: #666; }
+
+/* Light/white sections: comparison + contact */
+.section-light {
+  background: #f8f6f2;
+  border-bottom: 1px solid #e0ddd6;
+}
+.section-light .sec-label { color: #999; }
+.section-light .sec-title { color: var(--text-dark); }
+
+/* Compare table on light bg */
+.section-light .compare-table th {
+  color: #999;
+  border-bottom-color: #ddd;
+}
+.section-light .compare-table th.col-us-head { color: var(--text-dark); }
+.section-light .compare-table td {
+  color: #666;
+  border-bottom-color: #e8e4dc;
+}
+.section-light .compare-table td.row-label { color: #888; }
+.section-light .compare-table td.col-us { color: var(--text-dark); font-weight: 500; }
+.section-light .compare-table td.col-us.tick::before { color: var(--text-dark); }
+.section-light .compare-table tbody tr:hover td { background: #f0ede6; }
+
+/* Contact form on light bg */
+.section-light .contact-layout { background: #e0ddd6; }
+.section-light .contact-meta { background: #f8f6f2; }
+.section-light .contact-meta-label { color: #999; }
+.section-light .contact-meta-value { color: #555; }
+.section-light .contact-meta-value a { color: #555; }
+.section-light .contact-meta-value a:hover { color: var(--text-dark); }
+.section-light .contact-form { background: #f8f6f2; }
+.section-light .form-label { color: #888; }
+.section-light .form-input {
+  background: #fff;
+  border-color: #ddd;
+  color: var(--text-dark);
+}
+.section-light .form-input::placeholder { color: #bbb; }
+.section-light .form-input:focus { border-color: var(--text-dark); }
+.section-light .form-checkbox {
+  border-color: #ccc;
+  color: #777;
+}
+.section-light .form-checkbox:hover { border-color: #999; color: #444; }
+.section-light .form-checkbox input[type="checkbox"] { border-color: #ccc; }
+.section-light .form-checkbox input[type="checkbox"]:checked {
+  background: var(--text-dark);
+  border-color: var(--text-dark);
+}
+.section-light .form-checkbox input[type="checkbox"]:checked + span { color: var(--text-dark); }
+.section-light .form-note { color: #999; }
+.section-light .btn-primary {
+  background: var(--text-dark);
+  color: #f5f2ec;
+}
+.section-light .btn-primary:hover { opacity: 0.85; }
+.section-light .form-success { border-color: var(--text-dark); }
+.section-light .form-success-icon { color: var(--text-dark); }
+.section-light .form-success-title { color: var(--text-dark); }
+.section-light .form-success-sub { color: #888; }
