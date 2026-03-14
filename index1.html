@@ -1,0 +1,1065 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vasuist — Audit-Ready Security & Compliance</title>
+    <meta
+      name="description"
+      content="Vasuist helps 10–50 person startups become audit-ready, enterprise-trusted, and investor-credible — across ISO 27001, SOC 2, DPDP, SEBI, GDPR, NIST, and EU-CRA."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --black: #080808;
+        --surface: #101010;
+        --surface2: #161616;
+        --white: #f5f5f0;
+        --accent: #c8f04a;
+        --muted: #555555;
+        --border: #1e1e1e;
+        --serif: "DM Serif Display", serif;
+        --sans: "Instrument Sans", sans-serif;
+        --mono: "DM Mono", monospace;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--black);
+        color: var(--white);
+        font-family: var(--sans);
+        font-size: 15px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* ── NAV ── */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.25rem 2.5rem;
+        border-bottom: 0.5px solid var(--border);
+        position: sticky;
+        top: 0;
+        background: rgba(8, 8, 8, 0.96);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        z-index: 100;
+      }
+
+      .nav-logo {
+        font-family: var(--mono);
+        font-size: 13px;
+        letter-spacing: 0.2em;
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+
+      .nav-links a {
+        font-size: 13px;
+        color: #666;
+        text-decoration: none;
+        letter-spacing: 0.03em;
+        transition: color 0.2s;
+      }
+
+      .nav-links a:hover {
+        color: var(--white);
+      }
+
+      .nav-cta {
+        background: var(--accent);
+        color: var(--black);
+        font-family: var(--sans);
+        font-size: 13px;
+        font-weight: 600;
+        padding: 0.5rem 1.25rem;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: opacity 0.2s;
+      }
+
+      .nav-cta:hover {
+        opacity: 0.88;
+      }
+
+      /* ── HERO ── */
+      .hero {
+        padding: 5rem 2.5rem 4rem;
+        border-bottom: 0.5px solid var(--border);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .bg-grid {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 45%;
+        opacity: 0.025;
+        background-image:
+          linear-gradient(#fff 1px, transparent 1px),
+          linear-gradient(90deg, #fff 1px, transparent 1px);
+        background-size: 44px 44px;
+        pointer-events: none;
+      }
+
+      .trust-bar {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+      }
+
+      .trust-dot {
+        width: 7px;
+        height: 7px;
+        background: var(--accent);
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+
+      .trust-bar span {
+        font-family: var(--mono);
+        font-size: 11px;
+        color: #777;
+        letter-spacing: 0.1em;
+      }
+
+      .hero h1 {
+        font-family: var(--serif);
+        font-size: clamp(2.6rem, 5.5vw, 4.8rem);
+        font-weight: 400;
+        line-height: 1.06;
+        max-width: 820px;
+        color: var(--white);
+        margin-bottom: 1.75rem;
+      }
+
+      .hero h1 em {
+        font-style: italic;
+        color: var(--accent);
+      }
+
+      .hero-sub {
+        font-size: 15px;
+        color: #777;
+        max-width: 520px;
+        line-height: 1.75;
+        margin-bottom: 2.5rem;
+      }
+
+      .hero-actions {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-bottom: 4rem;
+        flex-wrap: wrap;
+      }
+
+      .btn-primary {
+        background: var(--accent);
+        color: var(--black);
+        font-family: var(--sans);
+        font-size: 14px;
+        font-weight: 600;
+        padding: 0.85rem 2rem;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: opacity 0.2s;
+      }
+
+      .btn-primary:hover {
+        opacity: 0.88;
+      }
+
+      .btn-ghost {
+        font-size: 13px;
+        color: #888;
+        cursor: pointer;
+        border: 0.5px solid var(--border);
+        background: none;
+        padding: 0.85rem 1.5rem;
+        text-decoration: none;
+        display: inline-block;
+        transition:
+          border-color 0.2s,
+          color 0.2s;
+      }
+
+      .btn-ghost:hover {
+        border-color: #444;
+        color: var(--white);
+      }
+
+      .hero-metrics {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border: 0.5px solid var(--border);
+      }
+
+      .metric {
+        padding: 1.25rem 1.5rem;
+        border-right: 0.5px solid var(--border);
+      }
+
+      .metric:last-child {
+        border-right: none;
+      }
+
+      .metric .num {
+        font-family: var(--serif);
+        font-size: 2rem;
+        color: var(--white);
+        line-height: 1;
+      }
+
+      .metric .lbl {
+        font-size: 11px;
+        color: #555;
+        letter-spacing: 0.05em;
+        margin-top: 0.4rem;
+        font-family: var(--mono);
+      }
+
+      /* ── SECTIONS ── */
+      .section {
+        padding: 4rem 2.5rem;
+        border-bottom: 0.5px solid var(--border);
+      }
+
+      .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 2.5rem;
+      }
+
+      .sec-label {
+        font-family: var(--mono);
+        font-size: 11px;
+        color: #444;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        margin-bottom: 0.75rem;
+      }
+
+      .sec-title {
+        font-family: var(--serif);
+        font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+        font-weight: 400;
+        color: var(--white);
+        max-width: 520px;
+        line-height: 1.2;
+      }
+
+      /* ── FRAMEWORKS ── */
+      .frameworks-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: var(--border);
+      }
+
+      .fw-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: var(--border);
+        margin-top: 1px;
+      }
+
+      .fw-card {
+        background: var(--black);
+        padding: 1.75rem;
+        cursor: default;
+        transition: background 0.2s;
+        position: relative;
+      }
+
+      .fw-card:hover {
+        background: var(--surface);
+      }
+
+      .fw-card.featured::before {
+        content: "POPULAR";
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-family: var(--mono);
+        font-size: 9px;
+        letter-spacing: 0.15em;
+        color: var(--accent);
+        border: 0.5px solid var(--accent);
+        padding: 2px 6px;
+      }
+
+      .fw-tag {
+        font-family: var(--mono);
+        font-size: 10px;
+        color: #444;
+        letter-spacing: 0.1em;
+        margin-bottom: 1rem;
+      }
+
+      .fw-card h3 {
+        font-family: var(--serif);
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: var(--white);
+        margin-bottom: 0.4rem;
+      }
+
+      .fw-card .controls {
+        font-size: 12px;
+        color: #555;
+        margin-bottom: 0.75rem;
+      }
+
+      .fw-card p {
+        font-size: 12px;
+        color: #555;
+        line-height: 1.65;
+      }
+
+      /* ── WHY ── */
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--border);
+      }
+
+      .why-card {
+        background: var(--black);
+        padding: 2rem 1.75rem;
+        transition: background 0.2s;
+      }
+
+      .why-card:hover {
+        background: var(--surface);
+      }
+
+      .why-num {
+        font-family: var(--mono);
+        font-size: 11px;
+        color: #333;
+        margin-bottom: 1.5rem;
+      }
+
+      .why-card h3 {
+        font-family: var(--serif);
+        font-size: 1.35rem;
+        font-weight: 400;
+        color: var(--white);
+        margin-bottom: 0.75rem;
+      }
+
+      .why-card p {
+        font-size: 13px;
+        color: #666;
+        line-height: 1.75;
+      }
+
+      /* ── COMPARE TABLE ── */
+      .compare-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .compare-table th {
+        text-align: left;
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        color: #444;
+        padding: 1rem 1.5rem;
+        border-bottom: 0.5px solid var(--border);
+      }
+
+      .compare-table th.col-us-head {
+        color: var(--accent);
+      }
+
+      .compare-table td {
+        padding: 1rem 1.5rem;
+        font-size: 13px;
+        border-bottom: 0.5px solid var(--border);
+        color: #444;
+      }
+
+      .compare-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .compare-table td.row-label {
+        color: #888;
+      }
+
+      .compare-table td.col-us {
+        color: var(--white);
+      }
+
+      .compare-table td.col-us.tick::before {
+        content: "✓ ";
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      /* ── PROCESS ── */
+      .process-rows {
+        border: 0.5px solid var(--border);
+      }
+
+      .proc-row {
+        display: grid;
+        grid-template-columns: 160px 120px 1fr;
+        border-bottom: 0.5px solid var(--border);
+      }
+
+      .proc-row:last-child {
+        border-bottom: none;
+      }
+
+      .proc-step {
+        padding: 1.5rem;
+        border-right: 0.5px solid var(--border);
+        font-family: var(--mono);
+        font-size: 11px;
+        color: #444;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .proc-time {
+        padding: 1.5rem;
+        border-right: 0.5px solid var(--border);
+        font-family: var(--mono);
+        font-size: 11px;
+        color: var(--accent);
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .proc-content {
+        padding: 1.5rem;
+      }
+
+      .proc-content h4 {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--white);
+        margin-bottom: 0.3rem;
+      }
+
+      .proc-content p {
+        font-size: 13px;
+        color: #666;
+        line-height: 1.65;
+      }
+
+      /* ── WHO WE HELP ── */
+      .who-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: var(--border);
+      }
+
+      .who-card {
+        background: var(--black);
+        padding: 1.75rem;
+        transition: background 0.2s;
+      }
+
+      .who-card:hover {
+        background: var(--surface);
+      }
+
+      .who-tag {
+        display: inline-block;
+        font-family: var(--mono);
+        font-size: 9px;
+        letter-spacing: 0.12em;
+        color: var(--accent);
+        border: 0.5px solid var(--accent);
+        padding: 2px 6px;
+        margin-bottom: 1rem;
+      }
+
+      .who-card h4 {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--white);
+        margin-bottom: 0.6rem;
+      }
+
+      .who-card p {
+        font-size: 13px;
+        color: #666;
+        line-height: 1.65;
+      }
+
+      /* ── CTA ── */
+      .cta-block {
+        padding: 6rem 2.5rem;
+        text-align: center;
+      }
+
+      .cta-block h2 {
+        font-family: var(--serif);
+        font-size: clamp(2rem, 4vw, 3.8rem);
+        font-weight: 400;
+        line-height: 1.1;
+        color: var(--white);
+        margin-bottom: 1rem;
+      }
+
+      .cta-block h2 em {
+        color: var(--accent);
+        font-style: italic;
+      }
+
+      .cta-block p {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 2.5rem;
+        max-width: 460px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+      }
+
+      .cta-meta {
+        font-family: var(--mono);
+        font-size: 11px;
+        color: #444;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      /* ── FOOTER ── */
+      footer {
+        padding: 2rem 2.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 0.5px solid var(--border);
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .footer-logo {
+        font-family: var(--mono);
+        font-size: 11px;
+        color: #333;
+        letter-spacing: 0.2em;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      .footer-links a {
+        font-size: 12px;
+        color: #444;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .footer-links a:hover {
+        color: #888;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 900px) {
+        nav {
+          padding: 1rem 1.5rem;
+        }
+        .nav-links {
+          display: none;
+        }
+        .hero {
+          padding: 3rem 1.5rem 2.5rem;
+        }
+        .hero-metrics {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .metric {
+          border-right: none;
+          border-bottom: 0.5px solid var(--border);
+        }
+        .metric:nth-child(odd) {
+          border-right: 0.5px solid var(--border);
+        }
+        .metric:last-child,
+        .metric:nth-last-child(2):nth-child(odd) {
+          border-bottom: none;
+        }
+        .section {
+          padding: 2.5rem 1.5rem;
+        }
+        .frameworks-grid,
+        .fw-row {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+        .proc-row {
+          grid-template-columns: 1fr;
+        }
+        .proc-step,
+        .proc-time {
+          border-right: none;
+          border-bottom: 0.5px solid var(--border);
+        }
+        .who-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .compare-table {
+          font-size: 12px;
+        }
+        .compare-table th,
+        .compare-table td {
+          padding: 0.75rem 1rem;
+        }
+        footer {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .hero-metrics {
+          grid-template-columns: 1fr 1fr;
+        }
+        .frameworks-grid,
+        .fw-row {
+          grid-template-columns: 1fr;
+        }
+        .who-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-actions {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .cta-meta {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a href="#" class="nav-logo">VASUIST</a>
+      <ul class="nav-links">
+        <li><a href="#frameworks">Frameworks</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#why">Why Vasuist</a></li>
+      </ul>
+      <a href="mailto:hello@vasuist.com" class="nav-cta">Book a Call →</a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="bg-grid"></div>
+      <div class="trust-bar">
+        <div class="trust-dot"></div>
+        <span
+          >GRC FOR INDIA'S GROWING STARTUPS · ISO · SOC 2 · DPDP · SEBI · GDPR ·
+          NIST · EU-CRA</span
+        >
+      </div>
+      <h1>Audit-ready in <em>weeks,</em><br />not months.</h1>
+      <p class="hero-sub">
+        Vasuist helps 10–50 person startups build compliance that passes real
+        audits, closes enterprise deals, and satisfies investors — across India
+        and global frameworks.
+      </p>
+      <div class="hero-actions">
+        <a href="mailto:hello@vasuist.com" class="btn-primary"
+          >Book a Free Assessment →</a
+        >
+        <a href="#process" class="btn-ghost">See how it works</a>
+      </div>
+      <div class="hero-metrics">
+        <div class="metric">
+          <div class="num">8</div>
+          <div class="lbl">Frameworks covered</div>
+        </div>
+        <div class="metric">
+          <div class="num">30</div>
+          <div class="lbl">Days to audit-ready</div>
+        </div>
+        <div class="metric">
+          <div class="num">1</div>
+          <div class="lbl">Expert. You. Always.</div>
+        </div>
+        <div class="metric">
+          <div class="num">0</div>
+          <div class="lbl">Junior associates</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FRAMEWORKS -->
+    <section class="section" id="frameworks">
+      <div class="section-header">
+        <div>
+          <div class="sec-label">Frameworks</div>
+          <div class="sec-title">
+            Every standard your auditors, investors, and enterprise clients will
+            ask for.
+          </div>
+        </div>
+      </div>
+      <div class="frameworks-grid">
+        <div class="fw-card featured">
+          <div class="fw-tag">GLOBAL SECURITY</div>
+          <h3>ISO 27001</h3>
+          <div class="controls">93 controls</div>
+          <p>
+            The gold standard for information security. Required by most
+            enterprise clients globally and many investors at Series A+.
+          </p>
+        </div>
+        <div class="fw-card featured">
+          <div class="fw-tag">US / GLOBAL</div>
+          <h3>SOC 2</h3>
+          <div class="controls">Type I &amp; Type II</div>
+          <p>
+            Non-negotiable for selling to US enterprises or SaaS buyers. Covers
+            security, availability, and confidentiality.
+          </p>
+        </div>
+        <div class="fw-card">
+          <div class="fw-tag">INDIA REGULATORY</div>
+          <h3>DPDP</h3>
+          <div class="controls">Digital Personal Data Protection Act</div>
+          <p>
+            India's landmark data privacy law. Mandatory compliance for any
+            company processing personal data of Indian citizens.
+          </p>
+        </div>
+        <div class="fw-card">
+          <div class="fw-tag">INDIA REGULATORY</div>
+          <h3>SEBI</h3>
+          <div class="controls">Financial compliance</div>
+          <p>
+            For fintech, wealth management, and any startup touching financial
+            services or investor reporting obligations.
+          </p>
+        </div>
+      </div>
+      <div class="fw-row">
+        <div class="fw-card">
+          <div class="fw-tag">EU REGULATION</div>
+          <h3>GDPR</h3>
+          <div class="controls">99 requirements</div>
+          <p>
+            Required for processing EU citizen data. Critical for any startup
+            with European customers or planning EU expansion.
+          </p>
+        </div>
+        <div class="fw-card">
+          <div class="fw-tag">US FRAMEWORK</div>
+          <h3>NIST CSF</h3>
+          <div class="controls">Cybersecurity Framework</div>
+          <p>
+            The US federal standard increasingly adopted by enterprise
+            procurement teams as a baseline security requirement.
+          </p>
+        </div>
+        <div class="fw-card">
+          <div class="fw-tag">EU REGULATION</div>
+          <h3>EU-CRA</h3>
+          <div class="controls">Cyber Resilience Act</div>
+          <p>
+            New EU law for products with digital elements. Essential for
+            hardware + software companies selling into European markets.
+          </p>
+        </div>
+        <div class="fw-card">
+          <div class="fw-tag">SECURITY AUDIT</div>
+          <h3>Gap Analysis</h3>
+          <div class="controls">Custom assessment</div>
+          <p>
+            Not sure where to start? We assess your current posture against any
+            framework and give you a prioritised roadmap.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY VASUIST -->
+    <section class="section" id="why">
+      <div class="section-header">
+        <div>
+          <div class="sec-label">Why Vasuist</div>
+          <div class="sec-title">
+            Traditional compliance consultants work for themselves. We work for
+            your deadline.
+          </div>
+        </div>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-num">01</div>
+          <h3>One expert.<br />Full ownership.</h3>
+          <p>
+            No junior associates, no rotating teams, no handoffs. You work
+            directly with Vasuist's founder — one person who is accountable for
+            your audit outcome, not just your deliverable.
+          </p>
+        </div>
+        <div class="why-card">
+          <div class="why-num">02</div>
+          <h3>Startup speed,<br />not enterprise pace.</h3>
+          <p>
+            Big 4 firms take 6–12 months. We move in weeks. Built for startups
+            that have a deal on the line, a VC asking questions, or an audit
+            deadline that can't move.
+          </p>
+        </div>
+        <div class="why-card">
+          <div class="why-num">03</div>
+          <h3>Controls that<br />actually hold.</h3>
+          <p>
+            No copy-paste templates. Every control is designed around how your
+            business actually operates — so it holds up under real audit
+            scrutiny, not just on paper.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARISON -->
+    <section class="section" id="services">
+      <div class="section-header">
+        <div>
+          <div class="sec-label">The Comparison</div>
+          <div class="sec-title">
+            What you get with Vasuist vs. a traditional compliance firm.
+          </div>
+        </div>
+      </div>
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th style="width: 35%">What matters</th>
+            <th style="width: 32.5%">Traditional firm / Big 4</th>
+            <th class="col-us-head" style="width: 32.5%">Vasuist</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-label">Time to audit-ready</td>
+            <td>6–12 months</td>
+            <td class="col-us tick">4–8 weeks</td>
+          </tr>
+          <tr>
+            <td class="row-label">Who you work with</td>
+            <td>Junior associate, changes mid-project</td>
+            <td class="col-us tick">Founder. Every call. Every deliverable.</td>
+          </tr>
+          <tr>
+            <td class="row-label">Frameworks in one engagement</td>
+            <td>Usually one, billed separately</td>
+            <td class="col-us tick">
+              Up to 3 frameworks, overlapping evidence
+            </td>
+          </tr>
+          <tr>
+            <td class="row-label">India-specific regulations</td>
+            <td>Often outsourced or overlooked</td>
+            <td class="col-us tick">DPDP + SEBI handled natively</td>
+          </tr>
+          <tr>
+            <td class="row-label">Control design approach</td>
+            <td>Copy-paste templates from a library</td>
+            <td class="col-us tick">Designed for how your business works</td>
+          </tr>
+          <tr>
+            <td class="row-label">Availability</td>
+            <td>Ticketing system, SLA-based</td>
+            <td class="col-us tick">
+              Direct access. You have the founder's number.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section" id="process">
+      <div class="section-header">
+        <div>
+          <div class="sec-label">Process</div>
+          <div class="sec-title">
+            From zero to audit-ready — a clear timeline, no surprises.
+          </div>
+        </div>
+      </div>
+      <div class="process-rows">
+        <div class="proc-row">
+          <div class="proc-step">01 — Assess</div>
+          <div class="proc-time">Day 1–3</div>
+          <div class="proc-content">
+            <h4>Free compliance assessment + gap analysis</h4>
+            <p>
+              We map your business model, audit drivers, and current posture.
+              You get a prioritised gap report and a clear scope — before any
+              commitment.
+            </p>
+          </div>
+        </div>
+        <div class="proc-row">
+          <div class="proc-step">02 — Design</div>
+          <div class="proc-time">Day 4–10</div>
+          <div class="proc-content">
+            <h4>Control framework built around your operations</h4>
+            <p>
+              No templates. Controls are mapped to how your team actually works
+              — implementable from day one, not ideal-state theory.
+            </p>
+          </div>
+        </div>
+        <div class="proc-row">
+          <div class="proc-step">03 — Implement</div>
+          <div class="proc-time">Day 11–25</div>
+          <div class="proc-content">
+            <h4>Policies, evidence packs, and audit trails</h4>
+            <p>
+              We build everything auditors expect — documentation, evidence
+              collection, process controls — so you're never scrambling before a
+              deadline.
+            </p>
+          </div>
+        </div>
+        <div class="proc-row">
+          <div class="proc-step">04 — Support</div>
+          <div class="proc-time">Day 26–30</div>
+          <div class="proc-content">
+            <h4>Through the audit and beyond</h4>
+            <p>
+              We stay with you through the audit, address findings in real time,
+              and set up ongoing compliance hygiene so you don't regress between
+              certifications.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO WE HELP -->
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <div class="sec-label">Who we help</div>
+          <div class="sec-title">
+            Built for the exact moment compliance becomes urgent.
+          </div>
+        </div>
+      </div>
+      <div class="who-grid">
+        <div class="who-card">
+          <div class="who-tag">ENTERPRISE SALES</div>
+          <h4>Enterprise deal on the line</h4>
+          <p>
+            Your prospect asked for ISO 27001 or SOC 2 before signing. You have
+            60 days. We've done this before.
+          </p>
+        </div>
+        <div class="who-card">
+          <div class="who-tag">VC-BACKED</div>
+          <h4>Post-funding round</h4>
+          <p>
+            Your investor wants clean compliance posture before the next
+            milestone or board review. We handle it.
+          </p>
+        </div>
+        <div class="who-card">
+          <div class="who-tag">REGULATED MARKETS</div>
+          <h4>Entering fintech or healthcare</h4>
+          <p>
+            SEBI, DPDP, RBI, GDPR — regulated markets have real teeth. We
+            navigate them so you don't get caught.
+          </p>
+        </div>
+        <div class="who-card">
+          <div class="who-tag">STARTING FROM ZERO</div>
+          <h4>No compliance function yet</h4>
+          <p>
+            Most 10–50 person startups don't. We build the full infrastructure —
+            policies, controls, evidence — from scratch.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-block">
+      <h2>Your next deal shouldn't<br />wait on <em>compliance.</em></h2>
+      <p>
+        Book a free 30-minute assessment. We'll tell you exactly what you need,
+        how long it takes, and what it costs — before any commitment.
+      </p>
+      <a href="mailto:hello@vasuist.com" class="btn-primary"
+        >Book a Free Assessment →</a
+      >
+      <div class="cta-meta">
+        <span>hello@vasuist.com</span>
+        <span>+91 98731 57096</span>
+        <span>No commitment required</span>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <span class="footer-logo">VASUIST · © 2026 · ALL RIGHTS RESERVED</span>
+      <div class="footer-links">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="mailto:hello@vasuist.com">hello@vasuist.com</a>
+        <a href="tel:+919873157096">+91 98731 57096</a>
+      </div>
+    </footer>
+  </body>
+</html>
