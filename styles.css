@@ -10,7 +10,7 @@
   --black: #0a0a0a;
   --surface: #141414;
   --surface2: #1c1c1c;
-  --cream: #e8e4d9;
+  --cream: #f2e9dd;
   --cream-dark: #d4cfc4;
   --white: #f5f2ec;
   --accent: #e8e4d9;
@@ -1334,3 +1334,146 @@ footer {
 .section-light .form-success-icon { color: var(--text-dark); }
 .section-light .form-success-title { color: var(--text-dark); }
 .section-light .form-success-sub { color: #888; }
+
+/* ── HERO VIEWPORT FIT ── */
+.hero {
+  padding: 3rem 2.5rem 2.5rem;
+  box-sizing: border-box;
+}
+.hero h1 {
+  margin-bottom: 1.25rem;
+}
+.hero-sub {
+  margin-bottom: 1.75rem;
+}
+.hero-metrics {
+  margin-top: 0;
+}
+@media (max-width: 900px) {
+  .hero {
+    min-height: unset !important;
+    padding: 2.5rem 1.5rem 2rem;
+  }
+}
+
+/* ── COMPARISON TABLE V2 ── */
+.compare-table-v2 {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.compare-table-v2 thead tr {
+  border-bottom: 2px solid #1a1a1a;
+}
+
+.compare-table-v2 th {
+  padding: 1.1rem 1.25rem;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+  letter-spacing: 0.01em;
+}
+
+.compare-table-v2 th.ct-feature {
+  width: 26%;
+  color: #888;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.compare-table-v2 th.ct-us {
+  width: 22%;
+  color: var(--text-dark);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.compare-table-v2 th.ct-them {
+  width: 17.3%;
+  color: #999;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* tbody rows */
+.compare-table-v2 tbody tr {
+  border-bottom: 1px solid #e8e4dc;
+  transition: background 0.1s;
+}
+.compare-table-v2 tbody tr:last-child {
+  border-bottom: none;
+}
+.compare-table-v2 tbody tr:hover {
+  background: #f0ede6;
+}
+
+.compare-table-v2 td {
+  padding: 1rem 1.25rem;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.ct-label {
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 13px;
+}
+
+/* Vasuist column — highlighted */
+.compare-table-v2 th.ct-us,
+.compare-table-v2 td.ct-us-val {
+  background: rgba(26, 26, 26, 0.04);
+  border-left: 2px solid var(--text-dark);
+  border-right: 1px solid #e0ddd6;
+}
+
+.ct-us-val {
+  font-weight: 500;
+}
+
+.ct-them-val {
+  color: #888;
+}
+
+/* Check / cross / mid states */
+.ct-good {
+  color: #1a1a1a;
+}
+.ct-good::first-letter {
+  color: #2a7a2a;
+  font-weight: 700;
+}
+.ct-bad {
+  color: #aaa;
+}
+.ct-bad::first-letter {
+  color: #c0392b;
+  font-weight: 700;
+}
+.ct-mid {
+  color: #999;
+}
+
+/* Mobile — scroll horizontally */
+@media (max-width: 900px) {
+  .compare-table-v2 {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 12px;
+  }
+  .compare-table-v2 th,
+  .compare-table-v2 td {
+    padding: 0.75rem 0.9rem;
+    min-width: 130px;
+  }
+  .compare-table-v2 th.ct-feature,
+  .compare-table-v2 td.ct-label {
+    min-width: 140px;
+  }
+}

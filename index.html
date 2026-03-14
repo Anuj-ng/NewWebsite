@@ -58,7 +58,7 @@
     </div>
 
     <!-- HERO -->
-    <section class="hero" id="home">
+    <section class="hero" id="home" style="min-height: calc(100vh - 62px); display: flex; flex-direction: column; justify-content: center;">
       <div class="bg-grid"></div>
       <div class="trust-bar reveal">
         <div class="trust-dot"></div>
@@ -70,7 +70,7 @@
         audits, closes enterprise deals, and satisfies investors &mdash; across India
         and global frameworks.
       </p>
-      <div class="hero-actions reveal reveal-delay-3">
+      <div class="hero-actions reveal reveal-delay-3" style="margin-bottom: 2rem;">
         <a href="#" class="btn-primary em-link" data-u="hello" data-d="vasuist.com">Book a Free Assessment &rarr;</a>
         <a href="#process" class="btn-ghost">See how it works</a>
       </div>
@@ -241,48 +241,58 @@
           </div>
         </div>
       </div>
-      <table class="compare-table reveal">
+      <table class="compare-table compare-table-v2 reveal">
         <thead>
           <tr>
-            <th style="width: 35%">What matters</th>
-            <th style="width: 32.5%">Traditional firm / Big 4</th>
-            <th class="col-us-head" style="width: 32.5%">Vasuist</th>
+            <th class="ct-feature">Feature</th>
+            <th class="ct-us">Vasuist</th>
+            <th class="ct-them">Big 4 / Large Firm</th>
+            <th class="ct-them">Boutique Consultant</th>
+            <th class="ct-them">Compliance Software</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="row-label">Time to audit-ready</td>
-            <td>6–12 months</td>
-            <td class="col-us tick">4–8 weeks</td>
+            <td class="ct-label">Time to audit-ready</td>
+            <td class="ct-us-val ct-good">&#10003; 4–8 weeks</td>
+            <td class="ct-them-val ct-bad">&#10007; 6–12 months</td>
+            <td class="ct-them-val ct-mid">~ 3–6 months</td>
+            <td class="ct-them-val ct-mid">~ Varies widely</td>
           </tr>
           <tr>
-            <td class="row-label">Who you work with</td>
-            <td>Junior associate, changes mid-project</td>
-            <td class="col-us tick">Founder. Every call. Every deliverable.</td>
+            <td class="ct-label">Who you work with</td>
+            <td class="ct-us-val ct-good">&#10003; Founder, every call</td>
+            <td class="ct-them-val ct-bad">&#10007; Junior associate</td>
+            <td class="ct-them-val ct-mid">~ Depends on firm</td>
+            <td class="ct-them-val ct-bad">&#10007; No human advisor</td>
           </tr>
           <tr>
-            <td class="row-label">Frameworks in one engagement</td>
-            <td>Usually one, billed separately</td>
-            <td class="col-us tick">
-              Up to 3 frameworks, overlapping evidence
-            </td>
+            <td class="ct-label">India regulations (DPDP, SEBI)</td>
+            <td class="ct-us-val ct-good">&#10003; Native expertise</td>
+            <td class="ct-them-val ct-bad">&#10007; Often outsourced</td>
+            <td class="ct-them-val ct-mid">~ Limited coverage</td>
+            <td class="ct-them-val ct-bad">&#10007; Not covered</td>
           </tr>
           <tr>
-            <td class="row-label">India-specific regulations</td>
-            <td>Often outsourced or overlooked</td>
-            <td class="col-us tick">DPDP + SEBI handled natively</td>
+            <td class="ct-label">Multiple frameworks at once</td>
+            <td class="ct-us-val ct-good">&#10003; Up to 3, overlapping</td>
+            <td class="ct-them-val ct-bad">&#10007; Billed separately</td>
+            <td class="ct-them-val ct-mid">~ One at a time</td>
+            <td class="ct-them-val ct-mid">~ Template-based</td>
           </tr>
           <tr>
-            <td class="row-label">Control design approach</td>
-            <td>Copy-paste templates from a library</td>
-            <td class="col-us tick">Designed for how your business works</td>
+            <td class="ct-label">Control design approach</td>
+            <td class="ct-us-val ct-good">&#10003; Built for your business</td>
+            <td class="ct-them-val ct-bad">&#10007; Copy-paste templates</td>
+            <td class="ct-them-val ct-mid">~ Generic frameworks</td>
+            <td class="ct-them-val ct-bad">&#10007; Automated checklists</td>
           </tr>
           <tr>
-            <td class="row-label">Availability</td>
-            <td>Ticketing system, SLA-based</td>
-            <td class="col-us tick">
-              Direct access. You have the founder's number.
-            </td>
+            <td class="ct-label">Direct access &amp; availability</td>
+            <td class="ct-us-val ct-good">&#10003; Founder's number</td>
+            <td class="ct-them-val ct-bad">&#10007; Ticketing system</td>
+            <td class="ct-them-val ct-mid">~ Email, slow response</td>
+            <td class="ct-them-val ct-bad">&#10007; Support tickets only</td>
           </tr>
         </tbody>
       </table>
